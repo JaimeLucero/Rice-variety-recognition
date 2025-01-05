@@ -232,7 +232,7 @@ if selected == "Home":
             # Set session state immediately when the button is pressed
             st.session_state['camera_open'] = True
             # Only rerun after setting the state (avoiding infinite loop)
-            st.rerun()  # Trigger a rerun after state change
+            st.experimental_rerun()
     else:
         # Show the camera input when the button is clicked
         st.markdown("<p style='font-size: 18px; font-weight: bold;margin-bottom: 27px;'>Capture your Image</p>", unsafe_allow_html=True)
@@ -244,7 +244,7 @@ if selected == "Home":
         # Button to "close" the camera (reset the state)
         if st.button('Close Camera'):
             st.session_state['camera_open'] = False
-            st.rerun()  # Trigger a rerun after state change
+            st.experimental_rerun()
 
 # Insert ang model here et ikaw na bahala HAHAHHAHA
 
