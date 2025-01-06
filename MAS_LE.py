@@ -216,7 +216,6 @@ if selected == "Home":
         </style>
         """, unsafe_allow_html=True
     )
-
     # Session state to track if the camera has been opened
     if 'camera_open' not in st.session_state:
         st.session_state['camera_open'] = False
@@ -231,8 +230,7 @@ if selected == "Home":
         if st.button('Take a Picture', key="take_picture", help="Click to open camera"):
             # Set session state immediately when the button is pressed
             st.session_state['camera_open'] = True
-            # Only rerun after setting the state (avoiding infinite loop)
-            st.experimental_rerun()
+            st.rerun()  # Trigger a rerun after state change
     else:
         # Show the camera input when the button is clicked
         st.markdown("<p style='font-size: 18px; font-weight: bold;margin-bottom: 27px;'>Capture your Image</p>", unsafe_allow_html=True)
@@ -244,9 +242,18 @@ if selected == "Home":
         # Button to "close" the camera (reset the state)
         if st.button('Close Camera'):
             st.session_state['camera_open'] = False
-            st.experimental_rerun()
+            st.rerun()  # Trigger a rerun after state change
 
-# Insert ang model here et ikaw na bahala HAHAHHAHA
+    # Display the uploaded file image below
+    if uploaded_file is not None:
+        st.image(uploaded_file, caption="Uploaded Image", use_container_width=True)
+        if st.button("Classify"):
+            st.write("Classifying...")
+            predict = pred.Predict(image=uploaded_file)
+            predicted_class, confidence = predict.predict()
+            st.write(f"Predicted Class: {predicted_class}")
+            st.write(f"Confidence Value: {confidence}")
+
 
 
 # About Page

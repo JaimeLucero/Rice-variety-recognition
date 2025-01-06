@@ -13,9 +13,6 @@ class Predict:
         image = image.resize((250, 250))  # Match the input size used during training
         image_array = np.array(image)
         
-        # Check if the pixel values are already in the range [0, 1]
-        if np.max(image_array) < 1:  # If max pixel value is > 1, it means it's likely in [0, 255] range
-            image_array = image_array / 255.0  # Normalize the image
 
         image_array = np.expand_dims(image_array, axis=0)  # Add batch dimension
         return image_array
