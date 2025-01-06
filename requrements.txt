@@ -1,5 +1,5 @@
 absl-py==2.1.0
-altair==4.2.2  # Compatible with tensorflow 2.13.0 and typing-extensions<4.6.0
+altair==5.5.0
 astunparse==1.6.3
 attrs==24.3.0
 blinker==1.9.0
@@ -33,7 +33,7 @@ narwhals==1.20.1
 numpy==1.24.3
 oauthlib==3.2.2
 opt_einsum==3.4.0
-optree==0.13.1  # compatible with typing-extensions>=4.5.0
+optree==0.13.1
 packaging==24.2
 pandas==2.2.3
 pillow==11.1.0
@@ -49,23 +49,24 @@ pytz==2024.2
 referencing==0.35.1
 requests==2.32.3
 requests-oauthlib==2.0.0
-rich==13.9.4  # compatible with typing-extensions<5.0 and >=4.0.0
+rich==13.9.4
 rpds-py==0.22.3
 rsa==4.9
 setuptools==75.6.0
 six==1.17.0
 smmap==5.0.2
-streamlit==1.41.1  # compatible with typing-extensions<5 and >=4.3.0
+streamlit==1.41.1
+streamlit-option-menu==0.4.0
 tenacity==9.0.0
-tensorboard==2.13.0
+tensorboard==2.18.0
 tensorboard-data-server==0.7.2
-tensorflow-estimator==2.13.0
+tensorflow-estimator==2.18.0
 tensorflow-io-gcs-filesystem==0.37.1
-tensorflow-macos==2.13.0
+tensorflow-macos==2.18.0
 termcolor==2.5.0
 toml==0.10.2
 tornado==6.4.2
-typing_extensions==4.5.0  # Ensure compatibility with all other packages
+typing_extensions==4.5.0
 tzdata==2024.2
 urllib3==2.3.0
 Werkzeug==3.1.3
