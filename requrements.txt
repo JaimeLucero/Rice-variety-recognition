@@ -1,6 +1,5 @@
-streamlit
-streamlit-option-menu
-tensorflow
-pandas
-numpy 
-pillow
+numpy==1.23.5
+pillow==9.5.0
+tensorflow==2.12.0
+streamlit-option-menu==0.3.6
+streamlit==1.25.0
